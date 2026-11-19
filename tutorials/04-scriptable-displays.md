@@ -1,6 +1,6 @@
 # 4. Scriptable displays with Lua
 
-![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Needs](https://img.shields.io/badge/needs-CSP-e10600)
 
 A scriptable display lets a Lua script draw onto the texture of a mesh, for example the instrument cluster or the center screen. CSP calls the script every frame (or less often, if you tell it to) and the result is shown in game.
 

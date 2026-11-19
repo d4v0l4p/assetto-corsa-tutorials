@@ -1,6 +1,6 @@
 # 13. Lua apps
 
-![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Needs](https://img.shields.io/badge/needs-CSP%200.1.76%2B-e8590c)
+![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Needs](https://img.shields.io/badge/needs-CSP%200.1.76%2B-e10600)
 
 Since CSP 0.1.76 you can write in-game apps in Lua (Lua 5.1 with LuaJIT) instead of Python. They are faster, have access to far more of the game and use the same API as car scripts.
 

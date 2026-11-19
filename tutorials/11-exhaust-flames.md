@@ -1,6 +1,6 @@
 # 11. Exhaust flames
 
-![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Needs](https://img.shields.io/badge/needs-CSP-e10600)
 
 CSP adds its own flame logic on top of the game's flames. Where the flames come out is still defined by the car's `data/flames.ini`, like in the original game. When and how strongly they fire is set in `ext_config.ini`.
 

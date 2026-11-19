@@ -1,6 +1,6 @@
 # 14. Lua: moving parts and changing materials
 
-![Level](https://img.shields.io/badge/level-advanced-cf222e) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+![Level](https://img.shields.io/badge/level-advanced-cf222e) ![Needs](https://img.shields.io/badge/needs-CSP-e10600)
 
 Car scripts (registered with `[SCRIPT_...]`, see [tutorial 5](05-sounds-and-inputs.md)) can find meshes and nodes of the car and change them every frame: rotate a needle, play an animation, light up an indicator, scroll a texture.
 

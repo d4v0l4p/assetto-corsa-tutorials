@@ -1,6 +1,6 @@
 # 3. ext_config.ini basics
 
-![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Needs](https://img.shields.io/badge/needs-CSP-e10600)
 
 `content/cars/<car_id>/extension/ext_config.ini` tells CSP what to do with a car: which meshes glow, which shaders to swap, where screens are and which scripts run. It uses an extended INI format (CSP calls it INIpp).
 

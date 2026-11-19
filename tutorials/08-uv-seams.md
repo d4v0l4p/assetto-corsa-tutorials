@@ -1,6 +1,6 @@
 # 8. Quick UV seams for car panels (Blender)
 
-![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Tool](https://img.shields.io/badge/tool-Blender-f5792a)
+![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Tool](https://img.shields.io/badge/tool-Blender-3f3f46)
 
 A fast way to get usable UVs on body panels, for example for liveries or AO maps.
 
@@ -23,4 +23,4 @@ Marking the outer edge loop as the seam works well when the mesh is clean, witho
 
 ---
 
-[← 7. Animating doors](07-animating-doors.md) · [Index](../README.md) · [9. Lights and emissives →](09-lights-and-emissives.md)
+[â† 7. Animating doors](07-animating-doors.md) Â· [Index](../README.md) Â· [9. Lights and emissives â†’](09-lights-and-emissives.md)

@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="#tutorials"><img src="https://img.shields.io/badge/tutorials-14-e8590c?style=for-the-badge" alt="14 tutorials"></a>
-  <a href="#examples"><img src="https://img.shields.io/badge/examples-3-f59f00?style=for-the-badge" alt="3 examples"></a>
-  <a href="https://acstuff.club/patch/"><img src="https://img.shields.io/badge/made%20for-CSP-30363d?style=for-the-badge" alt="Made for CSP"></a>
+  <a href="#tutorials"><img src="https://img.shields.io/badge/tutorials-14-e10600?style=for-the-badge" alt="14 tutorials"></a>
+  <a href="#examples"><img src="https://img.shields.io/badge/examples-3-ffffff?style=for-the-badge" alt="3 examples"></a>
+  <a href="https://acstuff.club/patch/"><img src="https://img.shields.io/badge/made%20for-CSP-18181b?style=for-the-badge" alt="Made for CSP"></a>
   <a href="https://github.com/ac-custom-shaders-patch/acc-lua-sdk"><img src="https://img.shields.io/badge/Lua-5.1%20%2F%20LuaJIT-000080?style=for-the-badge&logo=lua&logoColor=white" alt="Lua"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/d4v0l4p/assetto-corsa-tutorials?style=for-the-badge&color=2ea44f" alt="License"></a>
 </p>

@@ -1,6 +1,6 @@
 # 7. Animating doors and other parts (Blender)
 
-![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Tool](https://img.shields.io/badge/tool-Blender-f5792a)
+![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Tool](https://img.shields.io/badge/tool-Blender-3f3f46)
 
 Doors, hoods, wings and similar parts are animated with empties in Blender and exported as `.ksanim` files into the car's `animations` folder.
 
@@ -65,4 +65,4 @@ Replace `<version>` with your Blender version, for example `5.0`. These presets 
 
 ---
 
-[← 6. Troubleshooting](06-troubleshooting.md) · [Index](../README.md) · [8. Quick UV seams →](08-uv-seams.md)
+[â† 6. Troubleshooting](06-troubleshooting.md) Â· [Index](../README.md) Â· [8. Quick UV seams â†’](08-uv-seams.md)

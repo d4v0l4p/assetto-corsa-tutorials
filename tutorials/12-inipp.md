@@ -1,6 +1,6 @@
 # 12. Advanced configs with INIpp
 
-![Level](https://img.shields.io/badge/level-advanced-cf222e) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+![Level](https://img.shields.io/badge/level-advanced-cf222e) ![Needs](https://img.shields.io/badge/needs-CSP-e10600)
 
 `ext_config.ini` is not a plain INI file. CSP reads it with **INIpp**, its own preprocessor that adds includes, variables, expressions and templates. You do not need any of this for a normal car config, but it saves a lot of copy and paste on big ones.
 

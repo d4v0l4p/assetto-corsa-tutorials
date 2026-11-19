@@ -1,6 +1,6 @@
 # 5. Sounds and inputs in car scripts
 
-![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Needs](https://img.shields.io/badge/needs-CSP-e10600)
 
 Not every script needs a screen. For logic like warning sounds, CSP runs car scripts registered with a `[SCRIPT_...]` section:
 

@@ -1,6 +1,6 @@
 # 6. Troubleshooting
 
-![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Needs](https://img.shields.io/badge/needs-CSP-e10600)
 
 ## Where the logs are
 
