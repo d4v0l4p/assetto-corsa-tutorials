@@ -3,7 +3,7 @@
 Custom Shaders Patch publishes its configs, Lua libraries, examples and tools in the [ac-custom-shaders-patch](https://github.com/ac-custom-shaders-patch) organization. This page sorts the repositories by what you would use them for.
 
 ```mermaid
-flowchart TD
+flowchart LR
     CSP([ac-custom-shaders-patch])
     CSP --> CFG[Configs]
     CSP --> LUA[Lua scripting]

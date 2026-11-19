@@ -19,27 +19,11 @@
 
 ## Where to start
 
-```mermaid
-flowchart LR
-    subgraph S1 [" Start here "]
-        T1[1 Install mods] --> T2[2 Car folder] --> T3[3 ext_config basics]
-    end
-    subgraph S2 [" Make it shine "]
-        T9[9 Lights and emissives] --> T10[10 Switches and animations] --> T11[11 Exhaust flames]
-    end
-    subgraph S3 [" Script it "]
-        T4[4 Scriptable displays] --> T5[5 Sounds and inputs] --> T14[14 Lua scene objects]
-        T13[13 Lua apps]
-    end
-    subgraph S4 [" Build it "]
-        T7[7 Animating doors] --- T8[8 UV seams]
-    end
-    T3 --> T9
-    T3 --> T4
-    T3 --> T12[12 INIpp]
-```
+<p align="center">
+  <img src="assets/learning-path.svg" alt="Learning path: Start here, Make it shine, Script it, Build it" width="100%">
+</p>
 
-New to modding? Read 1 to 3 in order. After that, pick the track that matches what you want to build.
+New to modding? Read the green column first. After that, pick the track that matches what you want to build.
 
 ## Tutorials
 
