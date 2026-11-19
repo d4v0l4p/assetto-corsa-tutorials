@@ -1,0 +1,52 @@
+# 6. Troubleshooting
+
+## Where the logs are
+
+| Log | Location |
+|-----|----------|
+| Game log | `Documents/Assetto Corsa/logs/log.txt` |
+| CSP log | `Documents/Assetto Corsa/logs/custom_shaders_patch.log` |
+
+Both are rewritten on every start, so look at them right after the problem happened. Search for your script's file name or for `error`.
+
+From a Lua script you can write your own lines:
+
+```lua
+ac.log('speed: ' .. car.speedKmh)
+ac.warn('something looks wrong')
+ac.error('this should never happen')
+```
+
+The CSP *Lua Debug* developer app shows these messages live in game, together with errors from your scripts.
+
+## The screen stays black or shows the original texture
+
+1. **Wrong mesh name.** Check `MESHES` letter by letter, or better copy it again from the Objects Inspector. A typo fails silently.
+2. **Script error.** If the script fails to load, nothing is drawn. Look in the Lua Debug app or the CSP log for the line number.
+3. **Wrong resolution or region.** If you draw outside the area the mesh UVs use, you see nothing. Draw the test grid from tutorial 4.
+4. **Two displays on one mesh.** Search `ext_config.ini` and all included files for the mesh name. Comment out duplicates with `;`.
+5. **Too dark.** The script works but the mesh is not emissive. Add an `[EMISSIVE_LIGHT_...]` for it.
+
+## A section does nothing
+
+- **Typo in the section name.** `[EMMISIVE_LIGHT_...]` is just ignored.
+- **Wrong file.** CSP reads `extension/ext_config.ini` plus what it includes. A change in a backup copy has no effect.
+- **Overwritten later.** If the same mesh is configured twice, the later section usually wins. Search the whole file.
+- **Stray text after a value.** Comments start with `;`. Anything else after a value becomes part of it.
+
+## The script runs but values look wrong
+
+- `car.gear` is `-1` for reverse and `0` for neutral, so "first gear" is `1`.
+- `car.rpm` can briefly go above `car.rpmLimiter` when the limiter cuts in. Clamp before you use it for a bar.
+- Speed is `car.speedKmh`. For mph multiply by `0.621371`.
+
+## Performance drops after adding a script
+
+- Use `SKIP_FRAMES` on displays that do not need every frame.
+- Cache values instead of recomputing strings and tables in every `script.update`.
+- Combine many small images into one atlas and draw parts of it with `uvStart`/`uvEnd`.
+- Large textures cost video memory. A 4096 x 4096 display is rarely needed.
+
+## Still stuck?
+
+Remove things until it works. Comment out half of your new sections, check again, and keep halving. It sounds slow but finds the problem faster than guessing.
