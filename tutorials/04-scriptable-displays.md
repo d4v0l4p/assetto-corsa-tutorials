@@ -1,5 +1,7 @@
 # 4. Scriptable displays with Lua
 
+![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+
 A scriptable display lets a Lua script draw onto the texture of a mesh, for example the instrument cluster or the center screen. CSP calls the script every frame (or less often, if you tell it to) and the result is shown in game.
 
 ## 1. Register the display
@@ -95,7 +97,18 @@ Download the [CSP Lua SDK](https://github.com/ac-custom-shaders-patch/acc-lua-sd
 
 - **Keep `script.update` light.** It runs every frame. Do string formatting and table building only when a value changes, and use `SKIP_FRAMES` where you can.
 - **Timers.** `setInterval(function() ... end, seconds)` runs a function regularly, handy for blinking indicators.
-- **Brightness.** The display texture is only as bright as the mesh's emissive setup. If the screen is too dark in game, add an `[EMISSIVE_LIGHT_...]` for the same mesh (tutorial 3).
+- **Brightness.** The display texture is only as bright as the mesh's emissive setup. If the screen is too dark in game, make the mesh glow. `EMISSIVE_LIGHT` follows the headlights, so set `OFF_COLOR` to the same value as `COLOR` to keep the screen lit in daylight:
+
+  ```ini
+  [EMISSIVE_LIGHT_...]
+  NAME = cluster_screen
+  COLOR = 1, 1, 1, 2
+  OFF_COLOR = 1, 1, 1, 2
+  ```
+
+  For a real LCD look with a pixel grid and viewing angle color shift, try the `Material_DigitalScreen` template from the [PBR reference](../reference/csp-pbr-materials.ini).
 - **One script per screen.** Two `SCRIPTABLE_DISPLAY` sections on the same mesh fight over the texture and flicker.
 
-Next: [sounds and inputs](05-sounds-and-inputs.md).
+---
+
+[← 3. ext_config.ini basics](03-ext-config-basics.md) · [Index](../README.md) · [5. Sounds and inputs →](05-sounds-and-inputs.md)

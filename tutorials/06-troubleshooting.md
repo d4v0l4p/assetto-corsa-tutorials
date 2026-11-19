@@ -1,5 +1,7 @@
 # 6. Troubleshooting
 
+![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+
 ## Where the logs are
 
 | Log | Location |
@@ -25,7 +27,19 @@ The CSP *Lua Debug* developer app shows these messages live in game, together wi
 2. **Script error.** If the script fails to load, nothing is drawn. Look in the Lua Debug app or the CSP log for the line number.
 3. **Wrong resolution or region.** If you draw outside the area the mesh UVs use, you see nothing. Draw the test grid from tutorial 4.
 4. **Two displays on one mesh.** Search `ext_config.ini` and all included files for the mesh name. Comment out duplicates with `;`.
-5. **Too dark.** The script works but the mesh is not emissive. Add an `[EMISSIVE_LIGHT_...]` for it.
+5. **Too dark.** The script works but the mesh is not emissive. Add an `[EMISSIVE_LIGHT_...]` for it with `OFF_COLOR` equal to `COLOR`, otherwise it only glows with the headlights on.
+
+## General CSP problems
+
+From the [CSP troubleshooting page](https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/General-%E2%80%93-Troubleshooting):
+
+| Problem | Fix |
+|---|---|
+| Anything strange after an update | Run the Steam integrity check. It does not remove installed mods, it only restores changed game files |
+| `Can't find "\python33\PyObject_CallFunction"` | Install (or reinstall) the Microsoft Visual C++ 2010 Redistributable x64 |
+| Image flipped or split into two big triangles (AMD) | Enable *Resolve MSAA for color* in Extra FX settings |
+| "GPU may be overheating or overclocked" | Disable *Use DXGI Flip Model* in CSP's General settings |
+| Slight flicker on parts of a track or car | Disable *Use proper physically-based sampling* in Reflections FX |
 
 ## A section does nothing
 
@@ -50,3 +64,7 @@ The CSP *Lua Debug* developer app shows these messages live in game, together wi
 ## Still stuck?
 
 Remove things until it works. Comment out half of your new sections, check again, and keep halving. It sounds slow but finds the problem faster than guessing.
+
+---
+
+[← 5. Sounds and inputs](05-sounds-and-inputs.md) · [Index](../README.md) · [7. Animating doors →](07-animating-doors.md)

@@ -1,5 +1,7 @@
 # 1. Installing mods
 
+![Level](https://img.shields.io/badge/level-beginner-2ea44f)
+
 ## What you need
 
 1. **Assetto Corsa** from Steam. The base game is enough. The Ultimate Edition adds Kunos DLC cars and tracks that some mods depend on.
@@ -25,7 +27,8 @@ Manual install, if you prefer:
 | Apps (Python) | `assettocorsa/apps/python/<app>` |
 | Apps (Lua) | `assettocorsa/apps/lua/<app>` |
 
-A car folder is correct when it directly contains `data.acd` (or a `data` folder), one or more `.kn5` files and a `ui` folder. If you see another folder with the same name inside it, you unpacked one level too deep. Move the inner folder up.
+> [!TIP]
+> A car folder is correct when it directly contains `data.acd` (or a `data` folder), one or more `.kn5` files and a `ui` folder. If you see another folder with the same name inside it, you unpacked one level too deep. Move the inner folder up.
 
 ## Typical problems
 
@@ -43,4 +46,6 @@ A car folder is correct when it directly contains `data.acd` (or a `data` folder
 - Remove mods you do not use. Hundreds of cars make CM and the game start slower.
 - Name your own edits clearly, for example `ext_config.backup_2026-11-19.ini`, so you can go back.
 
-Next: [the car folder](02-car-folder.md).
+---
+
+[Index](../README.md) · [2. The car folder →](02-car-folder.md)

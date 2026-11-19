@@ -1,5 +1,7 @@
 # 2. The car folder
 
+![Level](https://img.shields.io/badge/level-beginner-2ea44f)
+
 Every car lives in `assettocorsa/content/cars/<car_id>/`. The folder name is the car ID. Scripts and configs refer to the car by it, so do not rename it after you started working on a car.
 
 ```
@@ -34,7 +36,10 @@ Files you will edit most:
 | `lights.ini` | Which meshes light up for headlights and brake lights |
 | `digital_instruments.ini` | Simple built-in digital displays (the old way, before CSP) |
 
-Physics edits only apply when you start a new session. Note that online servers check the physics checksum, so a modified car will not be allowed on servers that use the original.
+Physics edits only apply when you start a new session.
+
+> [!WARNING]
+> Online servers check the physics checksum. A car with modified physics will not be allowed on servers that use the original version.
 
 ## extension
 
@@ -58,4 +63,6 @@ Each subfolder in `skins/` is one paint scheme. It contains textures that replac
 
 Car sounds are an FMOD bank: `sfx/<car_id>.bank` plus `GUIDs.txt`. Many mods reuse sounds from a Kunos car. Then the bank and GUIDs only point to that car and are only a few KB. To make your own, use the audio SDK in `assettocorsa/sdk/audio`.
 
-Next: [ext_config.ini basics](03-ext-config-basics.md).
+---
+
+[← 1. Installing mods](01-installing-mods.md) · [Index](../README.md) · [3. ext_config.ini basics →](03-ext-config-basics.md)

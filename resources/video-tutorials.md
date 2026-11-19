@@ -72,3 +72,7 @@ Models and textures from other games belong to their publishers. Use conversions
 ## Reference
 
 - [CSP PBR material reference](../reference/csp-pbr-materials.ini) - every carpaint, interior and glass template with its defaults and a comment on each value.
+
+---
+
+[Index](../README.md) · [CSP projects on GitHub](csp-github.md)

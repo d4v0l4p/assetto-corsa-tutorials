@@ -16,6 +16,7 @@ Speed, gear, a 30 segment RPM bar that turns red near the limiter, a blinking sh
    [EMISSIVE_LIGHT_...]
    NAME = your_cluster_mesh
    COLOR = 1, 1, 1, 2
+   OFF_COLOR = 1, 1, 1, 2   ; keep it lit when the headlights are off
    ```
 
 3. Start a session and look at the cluster.

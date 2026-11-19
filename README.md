@@ -1,55 +1,148 @@
-# Assetto Corsa Tutorials and Resources
+<p align="center">
+  <img src="assets/banner.svg" alt="Assetto Corsa modding tutorials" width="100%">
+</p>
 
-Practical guides for modding Assetto Corsa with Custom Shaders Patch (CSP): installing mods, understanding a car folder, writing `ext_config.ini`, and building animated in-car screens with Lua.
+<p align="center">
+  <a href="#tutorials"><img src="https://img.shields.io/badge/tutorials-14-e8590c?style=for-the-badge" alt="14 tutorials"></a>
+  <a href="#examples"><img src="https://img.shields.io/badge/examples-3-f59f00?style=for-the-badge" alt="3 examples"></a>
+  <a href="https://acstuff.club/patch/"><img src="https://img.shields.io/badge/made%20for-CSP-30363d?style=for-the-badge" alt="Made for CSP"></a>
+  <a href="https://github.com/ac-custom-shaders-patch/acc-lua-sdk"><img src="https://img.shields.io/badge/Lua-5.1%20%2F%20LuaJIT-000080?style=for-the-badge&logo=lua&logoColor=white" alt="Lua"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/d4v0l4p/assetto-corsa-tutorials?style=for-the-badge&color=2ea44f" alt="License"></a>
+</p>
 
-Everything here comes from working on real car mods. The examples are small on purpose, so you can copy them into your own car and change them from there.
+<p align="center">
+  <b>Practical guides for modding Assetto Corsa with Custom Shaders Patch.</b><br>
+  From installing your first mod to writing Lua apps, with small examples you can copy straight into your car.
+</p>
+
+---
+
+## Where to start
+
+```mermaid
+flowchart LR
+    subgraph S1 [" Start here "]
+        T1[1 Install mods] --> T2[2 Car folder] --> T3[3 ext_config basics]
+    end
+    subgraph S2 [" Make it shine "]
+        T9[9 Lights and emissives] --> T10[10 Switches and animations] --> T11[11 Exhaust flames]
+    end
+    subgraph S3 [" Script it "]
+        T4[4 Scriptable displays] --> T5[5 Sounds and inputs] --> T14[14 Lua scene objects]
+        T13[13 Lua apps]
+    end
+    subgraph S4 [" Build it "]
+        T7[7 Animating doors] --- T8[8 UV seams]
+    end
+    T3 --> T9
+    T3 --> T4
+    T3 --> T12[12 INIpp]
+```
+
+New to modding? Read 1 to 3 in order. After that, pick the track that matches what you want to build.
 
 ## Tutorials
 
-| # | Topic | What you learn |
-|---|-------|----------------|
-| 1 | [Installing mods](tutorials/01-installing-mods.md) | Content Manager, CSP, where cars and tracks go, fixing broken installs |
-| 2 | [The car folder](tutorials/02-car-folder.md) | What `data`, `extension`, `skins`, `sfx` and `ui` are for, and which files you can safely edit |
-| 3 | [ext_config.ini basics](tutorials/03-ext-config-basics.md) | Sections, includes, emissive lights, shader replacements, finding mesh names |
-| 4 | [Scriptable displays with Lua](tutorials/04-scriptable-displays.md) | Draw a working speed/gear/RPM screen on any mesh in the car |
-| 5 | [Sounds and inputs in car scripts](tutorials/05-sounds-and-inputs.md) | Play a warning chime, toggle things with the Extra buttons |
-| 6 | [Troubleshooting](tutorials/06-troubleshooting.md) | Black screens, scripts that do nothing, where to find the logs |
-| 7 | [Animating doors (Blender)](tutorials/07-animating-doors.md) | Empty hierarchy (`BODY_HR`, `COCKPIT_HR`, `STEER_HR`), keyframes, ksanim export |
-| 8 | [Quick UV seams (Blender)](tutorials/08-uv-seams.md) | Boundary loop seams for body panels, tips for liveries |
+### Basics
 
-## Video tutorials
+| | Tutorial | What you learn |
+|:-:|---|---|
+| ![Beginner](https://img.shields.io/badge/-beginner-2ea44f) | [**1. Installing mods**](tutorials/01-installing-mods.md) | Content Manager, CSP, where cars and tracks go, fixing broken installs |
+| ![Beginner](https://img.shields.io/badge/-beginner-2ea44f) | [**2. The car folder**](tutorials/02-car-folder.md) | What `data`, `extension`, `skins`, `sfx` and `ui` are for |
+| ![Beginner](https://img.shields.io/badge/-beginner-2ea44f) | [**3. ext_config.ini basics**](tutorials/03-ext-config-basics.md) | Sections, includes, emissives, shader replacements, finding mesh names |
+| ![Beginner](https://img.shields.io/badge/-beginner-2ea44f) | [**6. Troubleshooting**](tutorials/06-troubleshooting.md) | Black screens, scripts that do nothing, where the logs are |
 
-[`resources/video-tutorials.md`](resources/video-tutorials.md) is a sorted list of YouTube tutorials: LODs, colliders, steering wheel side swap, rims, air suspension, flames, bones and weight painting, baking, UVs and liveries, and car conversions from other games.
+### Lights, switches and effects
 
-## Reference
+| | Tutorial | What you learn |
+|:-:|---|---|
+| ![Intermediate](https://img.shields.io/badge/-intermediate-d29922) | [**9. Lights and emissives**](tutorials/09-lights-and-emissives.md) | Every emissive type, fallback colors, sequential turn signals, dynamic lights, line lights |
+| ![Intermediate](https://img.shields.io/badge/-intermediate-d29922) | [**10. Switches and animations**](tutorials/10-switches-and-animations.md) | Extra A to F, `ANIMATION_` sections, all inputs, wobbly bits |
+| ![Beginner](https://img.shields.io/badge/-beginner-2ea44f) | [**11. Exhaust flames**](tutorials/11-exhaust-flames.md) | Antilag, flat shift, discharge, limiter and damage flames |
+| ![Advanced](https://img.shields.io/badge/-advanced-cf222e) | [**12. Advanced configs with INIpp**](tutorials/12-inipp.md) | Variables, expressions, templates, optional sections |
 
-- [`reference/csp-pbr-materials.ini`](reference/csp-pbr-materials.ini) - all CSP carpaint, interior and glass PBR templates with defaults and an explanation of every value. Copy a block into your `ext_config.ini` and keep only what you change.
+### Lua scripting
+
+| | Tutorial | What you learn |
+|:-:|---|---|
+| ![Intermediate](https://img.shields.io/badge/-intermediate-d29922) | [**4. Scriptable displays**](tutorials/04-scriptable-displays.md) | Draw a working speed/gear/RPM screen on any mesh |
+| ![Intermediate](https://img.shields.io/badge/-intermediate-d29922) | [**5. Sounds and inputs**](tutorials/05-sounds-and-inputs.md) | Play sounds, react to Extra buttons and camera view |
+| ![Intermediate](https://img.shields.io/badge/-intermediate-d29922) | [**13. Lua apps**](tutorials/13-lua-apps.md) | `manifest.ini`, windows, immediate mode UI, callbacks |
+| ![Advanced](https://img.shields.io/badge/-advanced-cf222e) | [**14. Moving parts and materials**](tutorials/14-lua-scene-objects.md) | Needles, indicators, scrolling textures, clickable meshes, physics events, CSP's Lua rules |
+
+### Modeling in Blender
+
+| | Tutorial | What you learn |
+|:-:|---|---|
+| ![Intermediate](https://img.shields.io/badge/-intermediate-d29922) | [**7. Animating doors**](tutorials/07-animating-doors.md) | `BODY_HR` / `COCKPIT_HR` / `STEER_HR`, keyframes, ksanim export |
+| ![Beginner](https://img.shields.io/badge/-beginner-2ea44f) | [**8. Quick UV seams**](tutorials/08-uv-seams.md) | Boundary loop seams for body panels, tips for liveries |
 
 ## Examples
 
-- [`examples/scriptable-display`](examples/scriptable-display) - complete digital cluster: speed, gear, RPM bar, fuel, blinking shift light
-- [`examples/seatbelt-chime`](examples/seatbelt-chime) - looping warning sound that only plays in the cockpit view
+<table>
+<tr>
+<td width="33%" valign="top">
 
-Copy the folder contents into `content/cars/<your_car>/extension/` and follow the README in each example.
+### [Digital cluster](examples/scriptable-display)
+Speed, gear, RPM bar, shift light and fuel gauge on a scriptable display.
+
+`extension/` · Lua
+
+</td>
+<td width="33%" valign="top">
+
+### [Seatbelt chime](examples/seatbelt-chime)
+A warning sound that only plays in the cockpit view.
+
+`extension/` · Lua
+
+</td>
+<td width="33%" valign="top">
+
+### [Top Speed app](examples/lua-app-top-speed)
+Lua app with a window, settings and saved preferences.
+
+`apps/lua/` · Lua
+
+</td>
+</tr>
+</table>
+
+## Reference
+
+| | |
+|---|---|
+| [**CSP PBR materials**](reference/csp-pbr-materials.ini) | Every carpaint, interior and glass template with defaults and an explanation of each value |
+| [**CSP projects on GitHub**](resources/csp-github.md) | All 18 repositories of the CSP organization, sorted by what you use them for |
+| [**Video tutorials and tools**](resources/video-tutorials.md) | YouTube tutorials for LODs, colliders, flames, Blender, baking, UVs and liveries |
 
 ## Resources
 
-### Tools
+<details open>
+<summary><b>Tools</b></summary>
 
-- [Content Manager](https://assettocorsa.club/content-manager.html) - the launcher almost everyone uses. Installs mods by drag and drop, has a showroom and a CSP settings page.
-- [Custom Shaders Patch](https://acstuff.club/patch/) - extends the game with new shaders, lights, weather and the Lua scripting used in these tutorials. Installed through Content Manager.
-- [actools on GitHub](https://github.com/gro-ove/actools) - source code of Content Manager.
-- Kunos SDK - ships with the game in `assettocorsa/sdk`. Contains the ksEditor (`sdk/editor`) for kn5 models and materials, and the audio SDK (`sdk/audio`) for FMOD car sounds.
+- [Content Manager](https://assettocorsa.club/content-manager.html) - the launcher almost everyone uses. Installs mods by drag and drop, has a showroom and the CSP settings.
+- [Custom Shaders Patch](https://acstuff.club/patch/) - new shaders, lights, weather and the Lua scripting used here. Installed through Content Manager.
+- [Bakery (VAO baker)](https://github.com/ac-custom-shaders-patch/acc-bakeryoptix) - bakes vertex ambient occlusion for cars and tracks.
+- [SDK shaders](https://github.com/ac-custom-shaders-patch/sdk-shaders) - CSP shaders for ksEditor.
+- Kunos SDK - ships with the game in `assettocorsa/sdk`: ksEditor (`sdk/editor`) and the FMOD audio SDK (`sdk/audio`).
 
-### Documentation
+More in [video tutorials and tools](resources/video-tutorials.md#tools).
 
-- [CSP config wiki](https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki) - reference for `ext_config.ini` sections.
-- [CSP config repository](https://github.com/ac-custom-shaders-patch/acc-extension-config) - the configs CSP ships with. Good to look at how real cars are set up.
-- [CSP Lua SDK](https://github.com/ac-custom-shaders-patch/acc-lua-sdk) and its [wiki](https://github.com/ac-custom-shaders-patch/acc-lua-sdk/wiki) - definitions of every Lua function. Point your editor at it for autocomplete (see tutorial 4).
+</details>
 
-More tools (ksanim exporter, PureRef, converters) are listed in [`resources/video-tutorials.md`](resources/video-tutorials.md#tools).
+<details open>
+<summary><b>Documentation</b></summary>
 
-### Content and community
+- [CSP config wiki](https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki) - reference for every `ext_config.ini` section.
+- [CSP configs](https://github.com/ac-custom-shaders-patch/acc-extension-config) - the configs CSP ships with. Great for seeing how real cars are set up.
+- [CSP Lua SDK](https://github.com/ac-custom-shaders-patch/acc-lua-sdk) and its [wiki](https://github.com/ac-custom-shaders-patch/acc-lua-sdk/wiki) - every Lua function, for autocomplete in your editor.
+- [CSP Lua examples](https://github.com/ac-custom-shaders-patch/acc-lua-examples) - car, physics, track, online and WeatherFX scripts.
+
+</details>
+
+<details>
+<summary><b>Content and community</b></summary>
 
 - [Assetto Corsa on Steam](https://store.steampowered.com/app/244210/)
 - [Official Assetto Corsa forum](https://www.assettocorsa.net/forum/) - includes the modding section with Kunos documentation.
@@ -57,10 +150,14 @@ More tools (ksanim exporter, PureRef, converters) are listed in [`resources/vide
 - [Overtake (formerly RaceDepartment)](https://www.overtake.gg/) - large mod database and forum.
 - [Peter Boese on Patreon](https://www.patreon.com/peterboese) - author of the Pure weather and lighting mod.
 
+</details>
+
 ## Contributing
 
 Found a mistake or have a trick worth sharing? Open an issue or a pull request. Please test changes in game first and mention your CSP version.
 
 ## License
 
-Code examples are under the MIT license (see [LICENSE](LICENSE)). Assetto Corsa is a trademark of Kunos Simulazioni. This repository is not affiliated with Kunos or the CSP project.
+Code examples are under the [MIT license](LICENSE). The PBR reference and the tutorials based on the CSP wiki summarize documentation from the [Custom Shaders Patch project](https://github.com/ac-custom-shaders-patch).
+
+Assetto Corsa is a trademark of Kunos Simulazioni. This repository is not affiliated with Kunos or the CSP project.

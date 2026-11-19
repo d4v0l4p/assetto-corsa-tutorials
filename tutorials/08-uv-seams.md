@@ -1,5 +1,7 @@
 # 8. Quick UV seams for car panels (Blender)
 
+![Level](https://img.shields.io/badge/level-beginner-2ea44f) ![Tool](https://img.shields.io/badge/tool-Blender-f5792a)
+
 A fast way to get usable UVs on body panels, for example for liveries or AO maps.
 
 ## Steps
@@ -18,3 +20,7 @@ Marking the outer edge loop as the seam works well when the mesh is clean, witho
 - For drift cars there is a dedicated AO map tutorial in the same section.
 - Planar UVs are an old approach. For high quality liveries, a proper UV layout painted in Substance Painter gives better results.
 - RizomUV Bridge for Blender makes many unwraps easier, with a better live distortion and checkerboard preview and a live preview of shortest path selections.
+
+---
+
+[← 7. Animating doors](07-animating-doors.md) · [Index](../README.md) · [9. Lights and emissives →](09-lights-and-emissives.md)

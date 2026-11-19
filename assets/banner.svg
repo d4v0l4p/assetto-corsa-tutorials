@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.6" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#21262d"/>
+    </linearGradient>
+    <linearGradient id="stripe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e8590c"/>
+      <stop offset="1" stop-color="#f59f00"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#grid)"/>
+
+  <!-- racing stripes -->
+  <g transform="skewX(-28)">
+    <rect x="1010" y="0" width="70" height="320" fill="url(#stripe)" opacity="0.95"/>
+    <rect x="1100" y="0" width="26" height="320" fill="#f59f00" opacity="0.8"/>
+    <rect x="1146" y="0" width="12" height="320" fill="#f59f00" opacity="0.55"/>
+  </g>
+
+  <!-- gauge -->
+  <g transform="translate(1035 165)" fill="none" stroke-linecap="round">
+    <circle r="122" fill="#0d1117" stroke="#30363d" stroke-width="3"/>
+    <path d="M -78 45 A 90 90 0 1 1 78 45" stroke="#30363d" stroke-width="14"/>
+    <path d="M -78 45 A 90 90 0 0 1 64 -63" stroke="url(#stripe)" stroke-width="14"/>
+    <line x1="0" y1="0" x2="52" y2="-48" stroke="#ffffff" stroke-width="6"/>
+    <circle r="10" fill="#ffffff" stroke="none"/>
+  </g>
+
+  <!-- text -->
+  <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+    <text x="72" y="118" fill="#f59f00" font-size="22" font-weight="600" letter-spacing="6">ASSETTO CORSA · CUSTOM SHADERS PATCH</text>
+    <text x="70" y="190" fill="#ffffff" font-size="64" font-weight="700">Modding Tutorials</text>
+    <text x="72" y="238" fill="#8b949e" font-size="26">Configs, lights, Lua scripts, apps and tools, explained step by step</text>
+  </g>
+  <rect x="72" y="262" width="120" height="5" rx="2" fill="url(#stripe)"/>
+</svg>

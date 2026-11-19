@@ -1,5 +1,7 @@
 # 5. Sounds and inputs in car scripts
 
+![Level](https://img.shields.io/badge/level-intermediate-d29922) ![Needs](https://img.shields.io/badge/needs-CSP-e8590c)
+
 Not every script needs a screen. For logic like warning sounds, CSP runs car scripts registered with a `[SCRIPT_...]` section:
 
 ```ini
@@ -9,7 +11,8 @@ SCRIPT = seatbelt.lua
 
 The file sits in `extension/`. Like display scripts, it defines `script.update(dt)`, which CSP calls every frame with the time since the last frame in seconds.
 
-Do not confuse this with `data/script.lua`. That one is a physics script, runs in a different environment and is checked by online servers.
+> [!WARNING]
+> Do not confuse this with `data/script.lua`. That one is a physics script, runs in the physics thread and is part of the car's physics data, which online servers check.
 
 ## Playing a sound
 
@@ -43,7 +46,7 @@ end
 
 ## Extra buttons
 
-`car.extraA` to `car.extraF` are the Extra switches that players bind in the controls settings. They are toggles: the value flips each time the button is pressed. To react to the moment it changes, remember the last value:
+`car.extraA` to `car.extraF` are the Extra switches that players bind in the controls settings. By default they are toggles: the value flips each time the button is pressed. With `HOLD_MODE` in `[EXTRA_SWITCHES]` a switch is only on while the key is held ([tutorial 10](10-switches-and-animations.md#extra-switches)). To react to the moment it changes, remember the last value:
 
 ```lua
 local car = ac.getCar(0)
@@ -75,4 +78,6 @@ This keeps working at any frame rate. Reset `t` to 0 when the effect stops, so i
 
 A complete seatbelt chime that uses all of this is in [`examples/seatbelt-chime`](../examples/seatbelt-chime).
 
-Next: [troubleshooting](06-troubleshooting.md).
+---
+
+[← 4. Scriptable displays](04-scriptable-displays.md) · [Index](../README.md) · [6. Troubleshooting →](06-troubleshooting.md)
