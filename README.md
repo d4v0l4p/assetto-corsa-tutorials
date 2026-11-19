@@ -14,6 +14,16 @@ Everything here comes from working on real car mods. The examples are small on p
 | 4 | [Scriptable displays with Lua](tutorials/04-scriptable-displays.md) | Draw a working speed/gear/RPM screen on any mesh in the car |
 | 5 | [Sounds and inputs in car scripts](tutorials/05-sounds-and-inputs.md) | Play a warning chime, toggle things with the Extra buttons |
 | 6 | [Troubleshooting](tutorials/06-troubleshooting.md) | Black screens, scripts that do nothing, where to find the logs |
+| 7 | [Animating doors (Blender)](tutorials/07-animating-doors.md) | Empty hierarchy (`BODY_HR`, `COCKPIT_HR`, `STEER_HR`), keyframes, ksanim export |
+| 8 | [Quick UV seams (Blender)](tutorials/08-uv-seams.md) | Boundary loop seams for body panels, tips for liveries |
+
+## Video tutorials
+
+[`resources/video-tutorials.md`](resources/video-tutorials.md) is a sorted list of YouTube tutorials: LODs, colliders, steering wheel side swap, rims, air suspension, flames, bones and weight painting, baking, UVs and liveries, and car conversions from other games.
+
+## Reference
+
+- [`reference/csp-pbr-materials.ini`](reference/csp-pbr-materials.ini) - all CSP carpaint, interior and glass PBR templates with defaults and an explanation of every value. Copy a block into your `ext_config.ini` and keep only what you change.
 
 ## Examples
 
@@ -36,6 +46,8 @@ Copy the folder contents into `content/cars/<your_car>/extension/` and follow th
 - [CSP config wiki](https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki) - reference for `ext_config.ini` sections.
 - [CSP config repository](https://github.com/ac-custom-shaders-patch/acc-extension-config) - the configs CSP ships with. Good to look at how real cars are set up.
 - [CSP Lua SDK](https://github.com/ac-custom-shaders-patch/acc-lua-sdk) and its [wiki](https://github.com/ac-custom-shaders-patch/acc-lua-sdk/wiki) - definitions of every Lua function. Point your editor at it for autocomplete (see tutorial 4).
+
+More tools (ksanim exporter, PureRef, converters) are listed in [`resources/video-tutorials.md`](resources/video-tutorials.md#tools).
 
 ### Content and community
 
